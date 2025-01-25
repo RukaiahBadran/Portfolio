@@ -23,12 +23,12 @@ class Experience {
 
 List<Experience> Experiences = [
   Experience(
-    role: 'Android Developer',
-    companyName: 'Prodigy InfoTech',
-    startTime: 'Aug 2024',
-    endTime: 'Sep 2024',
-    workType: 'Remote',
-    duration: '2 mos',
+    role: 'Research Assistant',
+    companyName: 'American University of the Middle East',
+    startTime: 'Jan 2024',
+    endTime: 'Aug 2024',
+    workType: '',
+    duration: '',
     start: true,
     end: true,
   ),

@@ -43,8 +43,8 @@ class _CursorTrackerState extends State<CursorTracker>
   // ];
 
   final List<Color> _gradientColors = [
-    const Color.fromARGB(255, 0, 81, 255),
-    const Color.fromARGB(255, 134, 227, 255),
+    const Color.fromARGB(255, 230, 88, 157),
+    const Color.fromARGB(255, 184, 139, 204),
   ];
 
   @override

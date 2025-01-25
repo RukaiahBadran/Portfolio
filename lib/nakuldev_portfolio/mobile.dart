@@ -8,8 +8,6 @@ import 'package:nakul_dev/functions/custom_tooltip.dart';
 import 'package:nakul_dev/functions/downloadResume.dart';
 import 'package:nakul_dev/functions/navigate.dart';
 import 'package:nakul_dev/functions/notifySnackBar.dart';
-import 'package:nakul_dev/nakuldev_portfolio/ToResponsivePage/toResponsive_Projects.dart';
-import 'package:nakul_dev/nakuldev_portfolio/ToResponsivePage/toResponsive_contactMe.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -514,15 +512,7 @@ class _mobileState extends State<mobile> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    GestureDetector(
-                      onTap: () {
-                        navigateTo(
-                            context,
-                            const toResponsiveLayout_project(
-                              initialIndex: 0,
-                            ));
-                      },
-                      child: Padding(
+                       Padding(
                         padding: const EdgeInsets.only(left: 16, right: 16),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -558,96 +548,96 @@ class _mobileState extends State<mobile> {
                           ],
                         ),
                       ),
-                    ),
+                    
                     const SizedBox(
                       height: 10,
                     ),
-                    SizedBox(
-                      height: 170,
-                      child: ListView.builder(
-                        // controller: pgController,
-                        scrollDirection: Axis.horizontal,
-                        itemCount: projects.length,
-                        itemBuilder: (context, index) {
-                          return GestureDetector(
-                            onTap: () {
-                              navigateTo(
-                                  context,
-                                  toResponsiveLayout_project(
-                                      initialIndex: index));
-                            },
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Container(
-                                  decoration: BoxDecoration(
-                                    color: EducationcontainerStyle.color,
-                                    borderRadius:
-                                        EducationcontainerStyle.borderRadius,
-                                  ),
-                                  height: mobile_ProjectContainer.height,
-                                  width: mobile_ProjectContainer.width,
-                                  padding: mobile_ProjectContainer.padding,
-                                  margin: mobile_ProjectContainer.margin,
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.end,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Icon(
-                                          color: textStyles.B.color,
-                                          Icons.arrow_right_rounded,
-                                          size: 33),
-                                      Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          Padding(
-                                            padding: const EdgeInsets.only(
-                                                bottom: 35),
-                                            child: Icon(
-                                              color: textStyles.B.color,
-                                              projects[index].icon,
-                                              size: 42,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: deviceHeight * 0.01,
-                                ),
-                                Container(
-                                  // decoration:  BoxDecoration(
-                                  //   color: EducationcontainerStyle.color,
-                                  //   borderRadius: mobile_ProjectContainer.borderRadius,
-                                  // ),
-                                  height: 30,
-                                  width: mobile_ProjectContainer.width,
-                                  padding: const EdgeInsets.only(left: 5),
-                                  margin: mobile_ProjectContainer.margin,
-                                  child: Text(
-                                    // minFontSize: 1,
-                                    // maxFontSize: 15,
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: GoogleFonts.chakraPetch(
-                                        textStyle: textStyles.P2B,
-                                        fontSize: 12),
-                                    // overflow: TextOverflow.ellipsis,
-                                    projects[index].title,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          );
-                        },
-                      ),
-                    ),
+                    // SizedBox(
+                    //   height: 170,
+                    //   child: ListView.builder(
+                    //     // controller: pgController,
+                    //     scrollDirection: Axis.horizontal,
+                    //     itemCount: projects.length,
+                    //     itemBuilder: (context, index) {
+                    //       return GestureDetector(
+                    //         onTap: () {
+                    //           navigateTo(
+                    //               context,
+                    //               toResponsiveLayout_project(
+                    //                   initialIndex: index));
+                    //         },
+                    //         child: Column(
+                    //           crossAxisAlignment: CrossAxisAlignment.start,
+                    //           children: [
+                    //             Container(
+                    //               decoration: BoxDecoration(
+                    //                 color: EducationcontainerStyle.color,
+                    //                 borderRadius:
+                    //                     EducationcontainerStyle.borderRadius,
+                    //               ),
+                    //               height: mobile_ProjectContainer.height,
+                    //               width: mobile_ProjectContainer.width,
+                    //               padding: mobile_ProjectContainer.padding,
+                    //               margin: mobile_ProjectContainer.margin,
+                    //               child: Column(
+                    //                 crossAxisAlignment: CrossAxisAlignment.end,
+                    //                 mainAxisAlignment:
+                    //                     MainAxisAlignment.spaceBetween,
+                    //                 children: [
+                    //                   Icon(
+                    //                       color: textStyles.B.color,
+                    //                       Icons.arrow_right_rounded,
+                    //                       size: 33),
+                    //                   Row(
+                    //                     mainAxisAlignment:
+                    //                         MainAxisAlignment.center,
+                    //                     crossAxisAlignment:
+                    //                         CrossAxisAlignment.center,
+                    //                     children: [
+                    //                       Padding(
+                    //                         padding: const EdgeInsets.only(
+                    //                             bottom: 35),
+                    //                         child: Icon(
+                    //                           color: textStyles.B.color,
+                    //                           projects[index].icon,
+                    //                           size: 42,
+                    //                         ),
+                    //                       ),
+                    //                     ],
+                    //                   ),
+                    //                 ],
+                    //               ),
+                    //             ),
+                    //             SizedBox(
+                    //               height: deviceHeight * 0.01,
+                    //             ),
+                    //             Container(
+                    //               // decoration:  BoxDecoration(
+                    //               //   color: EducationcontainerStyle.color,
+                    //               //   borderRadius: mobile_ProjectContainer.borderRadius,
+                    //               // ),
+                    //               height: 30,
+                    //               width: mobile_ProjectContainer.width,
+                    //               padding: const EdgeInsets.only(left: 5),
+                    //               margin: mobile_ProjectContainer.margin,
+                    //               child: Text(
+                    //                 // minFontSize: 1,
+                    //                 // maxFontSize: 15,
+                    //                 maxLines: 1,
+                    //                 overflow: TextOverflow.ellipsis,
+                    //                 style: GoogleFonts.chakraPetch(
+                    //                     textStyle: textStyles.P2B,
+                    //                     fontSize: 12),
+                    //                 // overflow: TextOverflow.ellipsis,
+                    //                 projects[index].title,
+                    //               ),
+                    //             ),
+                    //           ],
+                    //         ),
+                    //       );
+                    //     },
+                    //   ),
+                    // ),
                     Container(
                       padding: const EdgeInsets.all(5),
                       margin: const EdgeInsets.all(0),
@@ -1067,11 +1057,7 @@ class _mobileState extends State<mobile> {
               ),
             ),
             //contact me
-            GestureDetector(
-              onTap: () {
-                navigateTo(context, const toResponsiveLayout_contactMe());
-              },
-              child: Padding(
+             Padding(
                 padding: const EdgeInsets.only(bottom: 16),
                 child: CustomBox(
                   isHover: true,
@@ -1145,7 +1131,7 @@ class _mobileState extends State<mobile> {
                   ),
                 ),
               ),
-            ),
+            
           ],
         ),
       ),

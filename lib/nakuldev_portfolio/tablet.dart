@@ -9,8 +9,6 @@ import 'package:nakul_dev/functions/downloadResume.dart';
 import 'package:nakul_dev/functions/navigate.dart';
 import 'package:nakul_dev/functions/next_prev_controller.dart';
 import 'package:nakul_dev/functions/notifySnackBar.dart';
-import 'package:nakul_dev/nakuldev_portfolio/ToResponsivePage/toResponsive_Projects.dart';
-import 'package:nakul_dev/nakuldev_portfolio/ToResponsivePage/toResponsive_contactMe.dart';
 import 'package:nakul_dev/styles/styles.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
@@ -563,14 +561,6 @@ class _tabletState extends State<tablet> {
                       children: [
                         MouseRegion(
                           cursor: SystemMouseCursors.click,
-                          child: GestureDetector(
-                            onTap: () {
-                              navigateTo(
-                                  context,
-                                  const toResponsiveLayout_project(
-                                    initialIndex: 0,
-                                  ));
-                            },
                             child: Padding(
                               padding:
                                   const EdgeInsets.only(left: 16, right: 16),
@@ -610,7 +600,7 @@ class _tabletState extends State<tablet> {
                                 ],
                               ),
                             ),
-                          ),
+                          
                         ),
                         Padding(
                           padding: const EdgeInsets.only(top: 10),
@@ -623,16 +613,6 @@ class _tabletState extends State<tablet> {
                               itemBuilder: (context, index) {
                                 return MouseRegion(
                                   cursor: SystemMouseCursors.click,
-                                  child: GestureDetector(
-                                    onTap: () {
-                                      int newIndex = (index ~/
-                                          2); // Divides index by 2 and discards the remainder
-
-                                      navigateTo(
-                                          context,
-                                          toResponsiveLayout_project(
-                                              initialIndex: newIndex));
-                                    },
                                     child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
@@ -711,7 +691,7 @@ class _tabletState extends State<tablet> {
                                         ),
                                       ],
                                     ),
-                                  ),
+                                  
                                 );
                               },
                             ),
@@ -1204,12 +1184,7 @@ class _tabletState extends State<tablet> {
                   //contact me
                   MouseRegion(
                     cursor: SystemMouseCursors.click,
-                    child: GestureDetector(
-                      onTap: () {
-                        navigateTo(
-                            context, const toResponsiveLayout_contactMe());
-                      },
-                      child: CustomBox(
+                    child: CustomBox(
                         isHover: true,
                         hoverColor: ResumeColor,
                         borderRadius: containerStyle.borderRadius,
@@ -1282,7 +1257,7 @@ class _tabletState extends State<tablet> {
                           ),
                         ),
                       ),
-                    ),
+                  
                   ),
                 ],
               ),

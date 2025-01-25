@@ -1,4 +1,4 @@
-import 'package:flutter_animate/flutter_animate.dart';
+
 import 'package:nakul_dev/functions/Alert_Box.dart';
 import 'package:nakul_dev/functions/Mouse_Tracker.dart';
 import 'package:nakul_dev/functions/navigation_bar.dart';
@@ -23,7 +23,7 @@ class _toResponsiveLayoutState extends State<toResponsiveLayout> {
   @override
   void initState() {
     super.initState();
-    future_delay_dialog(5);
+    // future_delay_dialog(5);
   }
 
   Future<Null> future_delay_dialog(int duration_seconds) {
@@ -54,33 +54,26 @@ class _toResponsiveLayoutState extends State<toResponsiveLayout> {
               blobSizeMultiplier: 1,
               orbitRadius: 0.2,
               child: CursorTracker(
-                child: NavigationWrapper(
-                  showNavBar: false,
-                  currentIndex: widget.currentIndex,
                   child: const ResponsiveLayout(
                     desktopBody: desktop(),
                     mobileBody: mobile(),
                     tabletBody: tablet(),
                   ),
                 ),
-              ),
-            )
+              )
           : AnimatedBlobBackground(
               numberOfBlobs: 4,
               gravitationalPull: 1.0,
               baseSpeed: 0.5,
               blobSizeMultiplier: 1,
               orbitRadius: 0.2,
-              child: NavigationWrapper(
-                showNavBar: false,
-                currentIndex: widget.currentIndex,
                 child: const ResponsiveLayout(
                   desktopBody: desktop(),
                   mobileBody: mobile(),
                   tabletBody: tablet(),
                 ),
               ),
-            ),
+            
     );
   }
 }

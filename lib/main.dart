@@ -1,5 +1,4 @@
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:nakul_dev/functions/Alert_Box.dart';
 import 'package:nakul_dev/nakuldev_portfolio/ToResponsivePage/toResponsiveLayout_Main.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +18,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     Animate.restartOnHotReload = true;
     return MaterialApp(
-      title: "Nakul Dev",
+      title: "Rukaiah Badran",
       theme: ThemeData(
         colorScheme: const ColorScheme.dark(),
       ),

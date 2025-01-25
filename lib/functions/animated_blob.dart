@@ -34,8 +34,8 @@ class AnimatedBlobBackground extends StatefulWidget {
     List<BlobConfig>? blobConfigs,
   })  : blobConfigs = blobConfigs ??
             const [
-              BlobConfig(colors: [Colors.purple, Colors.transparent]),
-              BlobConfig(colors: [Colors.blue, Colors.transparent]),
+              BlobConfig(colors: [Color.fromARGB(255, 172, 49, 90), Colors.transparent]),
+              BlobConfig(colors: [Color.fromARGB(255, 151, 85, 244), Colors.transparent]),
               BlobConfig(colors: [Colors.indigo, Colors.transparent]),
             ],
         assert(blobConfigs == null || blobConfigs.length >= numberOfBlobs,

@@ -1,6 +1,3 @@
-name: nakul_dev
-description: "Hi, I'm Nakul, a computer engineer passionate about building innovative tech solutions."
-
 publish_to: 'none'
 
 
@@ -48,7 +45,7 @@ flutter:
      - assets/ss/findx.jpg
 
      - assets/i.png
-     - assets/pfp2.png
+     - C:/Users/runab/Desktop/RuWeb/rukiweb/assets/hs1-removebg-preview.png
      - assets/book.png
      - assets/emoji/Airplane.png
      - assets/emoji/Book.png

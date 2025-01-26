@@ -1,5 +1,5 @@
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:nakul_dev/nakuldev_portfolio/ToResponsivePage/toResponsiveLayout_Main.dart';
+import 'package:nakul_dev/toResponsiveLayout_Main.dart';
 import 'package:flutter/material.dart';
 
 void main() {
